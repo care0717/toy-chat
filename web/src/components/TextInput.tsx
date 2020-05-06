@@ -4,7 +4,7 @@ import SendButton from "./SendButton";
 
 function TextInput() {
   return (
-    <React.Frament>
+    <React.Fragment>
       <form className="wrap" noValidate autoComplete="off">
         <TextField
           id="standard-text"
@@ -14,7 +14,7 @@ function TextInput() {
         />
         <SendButton />
       </form>
-    </React.Frament>
+    </React.Fragment>
   );
 }
 
