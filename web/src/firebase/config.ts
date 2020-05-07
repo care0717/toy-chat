@@ -12,4 +12,12 @@ const firebaseConfig = {
 };
 
 export const firebaseApp = firebase.initializeApp(firebaseConfig);
+firebaseApp
+  .auth()
+  .signInAnonymously()
+  .catch(function (error) {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(`エラーが発生しました。エラーコード${errorCode}:${errorMessage}`);
+  });
 export const firebaseDb = firebaseApp.database();
