@@ -6,14 +6,14 @@ import { MessageContent } from '../atoms/MessageContent';
 import { Message } from '../../types/message';
 
 interface Props {
-    messages: Message[];
+    message: Message;
 }
 
-export const OtherMessage = () => {
+export const OtherMessage = ({message}: Props) => {
     return (
         <Grid container>
-            <UserIcon />
-            <MessageContent />
+            <UserIcon userImage={message.userImage}/>
+            <MessageContent content={message.content}/>
         </Grid>
     )
 };
